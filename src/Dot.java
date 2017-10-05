@@ -1,3 +1,5 @@
+import java.awt.*;
+
 /**
  * Created by michael_hopps on 10/5/17.
  */
@@ -7,10 +9,7 @@ public class Dot {
 
     //Constructor that takes in values for x and y
     // and assigns them to instance fields.
-
-
-
-    //Methods!
+//Methods!
     //1.  getX() -> returns x
     //2.  getY() -> returns y
 
