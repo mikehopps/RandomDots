@@ -11,6 +11,7 @@ public class DotsPanel extends JPanel{
     public DotsPanel(int width, int height){
         setSize(width,height);
 
+        a = new Dot(getWidth()/2, 0);
         //3.  Initialize Dot a to be the top center of the screen.
 //            Initialize Dot b to be the bottom left of the screen.
 //            Initialize Dot c to be the bottom right of the screen.

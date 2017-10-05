@@ -10,6 +10,11 @@ public class Dot {
     //Constructor that takes in values for x and y
     // and assigns them to instance fields.
 
+    public Dot(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
 
 //Methods!
     //1.  getX() -> returns x
@@ -23,6 +28,7 @@ public class Dot {
     //      and the parameter other Dot.
     //      recall the midpoint formula: ( (x1+x2)/2, (y1+y2)/2 )
     //int midX = (x + other.getX())/2;
+    //
 
     //}
 
