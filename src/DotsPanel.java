@@ -12,25 +12,31 @@ public class DotsPanel extends JPanel{
         setSize(width,height);
 
         a = new Dot(getWidth()/2, 0);
-        //3.  Initialize Dot a to be the top center of the screen.
-//            Initialize Dot b to be the bottom left of the screen.
-//            Initialize Dot c to be the bottom right of the screen.
-
+        b = new Dot(0, getHeight());
+        c = new Dot(getWidth(), getHeight());
     }
 
     public void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
 
-        //1.  Go finish the Dot class.
-        //2.  Make a few Dots and their midpoints and draw them to test your work.
-        //      Once satisfied with your results, delete your test code.
-        //3.  Go up to the constructor.
-
         //4.  Create a Dot called currentDot.  Have it represent the center of the screen.
 
-        //5.  Pick one of the 3 instance field Dots at random, I'll call it picked.
-        //6.  Assign currentDot to be the midpoint of currentDot and the picked Dot.
-        //7.  Draw currentDot.
+        Dot currentDot = new Dot(getWidth()/2, getHeight()/2);
+
+        for (int i = 0; i < 40000; i++) {
+            int r = (int)(Math.random()*3);
+            if(r == 0){ //move toward a
+                g2.setColor(Color.RED);
+                currentDot = a.getMidpoint(currentDot);
+            }else if(r == 1){ //move toward b
+                g2.setColor(Color.BLUE);
+                currentDot = b.getMidpoint(currentDot);
+            }else{  //move toward c
+                g2.setColor(Color.CYAN);
+                currentDot = c.getMidpoint(currentDot);
+            }
+            currentDot.draw(g2);
+        }
 
         //8.  Modify your code so that steps 5-7 are repeated 10,000 times.
 
